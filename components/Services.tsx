@@ -5,7 +5,6 @@ import {
   Title,
   Text,
   Container,
-  SimpleGrid,
   Card,
   List,
   Button,
@@ -15,7 +14,7 @@ import {
 import classes from "@/styles/Services.module.css";
 
 const Services: React.FC = () => {
-  const theme = useMantineTheme();
+  // const theme = useMantineTheme();
 
   const installations: string[] = [
     "Cold Room Installation (Custom & Prefab)",

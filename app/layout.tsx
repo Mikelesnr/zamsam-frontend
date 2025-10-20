@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { Roboto, Merriweather } from "next/font/google";
 import "./globals.css";
 import { MantineProviderWrapper } from "./providers/MantineProviderWrapper";
-import Image from "next/image";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
