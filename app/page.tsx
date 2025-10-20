@@ -8,7 +8,6 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 import Gallery from "@/components/Gallery";
 
 const Home: React.FC = () => {

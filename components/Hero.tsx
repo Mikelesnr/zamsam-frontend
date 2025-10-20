@@ -9,7 +9,6 @@ import {
   useMantineTheme,
   Overlay,
 } from "@mantine/core";
-import Image from "next/image"; // Import the Next.js Image component
 import classes from "@/styles/Hero.module.css";
 
 const Hero: React.FC = () => {

@@ -14,7 +14,7 @@ import {
 import classes from "@/styles/Header.module.css";
 
 const Header: React.FC = () => {
-  const theme = useMantineTheme();
+  // const theme = useMantineTheme();
 
   return (
     <AppShell.Header>
