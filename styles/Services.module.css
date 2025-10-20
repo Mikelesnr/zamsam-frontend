@@ -2,18 +2,20 @@
 .servicesSection {
   padding: 4rem 5%;
   text-align: center;
-  background-color: #333333;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f0f0f0;
+  backdrop-filter: blur(4px);
 }
 
 .sectionTitle {
   font-size: 2.5rem;
-  color: #003366; /* Primary Blue */
+  color: #ffffff; /* Primary Blue */
   margin-bottom: 1rem;
 }
 
 .sectionSubtitle {
   font-size: 1.1rem;
-  color: #333333;
+  color: #dddddd;
   margin-bottom: 3rem;
 }
 
@@ -33,11 +35,12 @@
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: #1a1a1a; /* Optional: dark card */
+  color: #f0f0f0;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  flex: 1 1 45%; /* Flex basis for two columns */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  flex: 1 1 45%;
   text-align: left;
   min-height: 400px;
   transition: transform 0.3s;
@@ -65,34 +68,25 @@
 .listItem {
   font-size: 1.1rem;
   margin-bottom: 10px;
-  color: #333333;
+  color: #e0e0e0;
   position: relative;
   padding-left: 25px;
 }
 
-/* Use a pseudo-element for a checkmark icon */
 .listItem::before {
-  content: "✓"; /* Or use a proper icon font/SVG */
-  color: #003366;
+  content: "✓";
+  color: #00ccff;
   font-weight: bold;
   position: absolute;
   left: 0;
 }
 
 .cardButton {
-  display: inline-block;
-  background-color: #003366;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s;
+  background-color: #00ccff;
+  color: #000000;
 }
 
 .cardButton:hover {
-  background-color: #00ccff;
+  background-color: #ffffff;
   color: #003366;
 }
