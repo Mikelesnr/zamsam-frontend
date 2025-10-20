@@ -2,15 +2,7 @@
 
 "use client";
 import React from "react";
-import {
-  AppShell,
-  Group,
-  Button,
-  Anchor,
-  Text,
-  Title,
-  useMantineTheme,
-} from "@mantine/core";
+import { AppShell, Group, Button, Anchor, Text, Title } from "@mantine/core";
 import classes from "@/styles/Header.module.css";
 
 const Header: React.FC = () => {
