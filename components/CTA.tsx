@@ -6,7 +6,6 @@ import {
   Title,
   Text,
   Button,
-  useMantineTheme,
 } from "@mantine/core";
 import { IconPhoneCall } from "@tabler/icons-react";
 import classes from "@/styles/CTA.module.css";

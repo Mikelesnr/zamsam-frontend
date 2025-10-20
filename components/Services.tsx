@@ -1,15 +1,6 @@
 // components/Services.tsx
 import React from "react";
-import {
-  Box,
-  Title,
-  Text,
-  Container,
-  Card,
-  List,
-  Button,
-  useMantineTheme,
-} from "@mantine/core";
+import { Box, Title, Text, Container, Card, List, Button } from "@mantine/core";
 
 import classes from "@/styles/Services.module.css";
 
