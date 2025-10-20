@@ -1,0 +1,62 @@
+/* styles/Hero.module.css */
+.hero {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Use a visually appealing, high-quality background image here */
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 51, 102, 0.9),
+      rgba(0, 51, 102, 0.7)
+    ),
+    url("/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 4rem 5%;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.headline {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #00ccff; /* Secondary Accent for H1 impact */
+}
+
+.subhead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.ctaButton {
+  background-color: #003366; /* Primary Blue */
+  color: #ffffff;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: 2px solid #00ccff; /* Added border for contrast */
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.ctaButton:hover {
+  background-color: #004488;
+  transform: translateY(-2px);
+}
+
+.tagline {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

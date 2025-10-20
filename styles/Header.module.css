@@ -1,0 +1,52 @@
+/* styles/Header.module.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 51, 102, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #003366; /* Primary Blue */
+}
+
+.logoAccent {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navLink {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #00ccff; /* Secondary Accent */
+}
+
+.ctaButton {
+  background-color: #00ccff; /* Secondary Accent */
+  color: #003366;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: #0099cc;
+}

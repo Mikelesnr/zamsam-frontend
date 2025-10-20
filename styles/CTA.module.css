@@ -1,0 +1,48 @@
+/* styles/CTA.module.css */
+.ctaSection {
+  padding: 4rem 5%;
+  background-color: #003366; /* Primary Blue */
+  color: #ffffff;
+  text-align: center;
+}
+
+.ctaHeadline {
+  font-size: 2.5rem;
+  color: #00ccff; /* Secondary Accent */
+  margin-bottom: 1rem;
+}
+
+.ctaSubhead {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: #00ccff; /* Secondary Accent */
+  color: #003366;
+  padding: 18px 40px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: #0099cc;
+  transform: scale(1.03);
+}
+
+.contactInfo {
+  margin-top: 2rem;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.contactLabel {
+  font-weight: 600;
+}
