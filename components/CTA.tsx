@@ -9,6 +9,7 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { IconPhoneCall } from "@tabler/icons-react";
+import classes from "@/styles/CTA.module.css";
 
 const CTA: React.FC = () => {
   const theme = useMantineTheme();
@@ -16,15 +17,16 @@ const CTA: React.FC = () => {
   return (
     <Box
       id="contact"
-      py={theme.spacing.xl * 4}
+      py={160}
       bg={theme.colors.blue[9]}
-      sx={{ textAlign: "center" }}
+      ta="center"
+      className={classes.ctaSection}
     >
       <Container size="md">
-        <Title order={2} mb="md" color="cyan.4">
+        <Title order={2} mb="md" c="cyan.4">
           Need Urgent Service? Call Zamsam Engineering Now.
         </Title>
-        <Text size="lg" mb="xl" color={theme.white} fw={300}>
+        <Text size="lg" mb="xl" c={theme.white} fw={300}>
           Fast, reliable repairs and maintenance to keep your systems running
           efficiently.
         </Text>
@@ -32,22 +34,17 @@ const CTA: React.FC = () => {
         <Button
           component="a"
           href="tel:0800-ZAMSAM"
-          color="cyan" // Secondary Accent button
+          color="cyan"
           size="xl"
           radius="lg"
           fw={800}
           leftSection={<IconPhoneCall size={24} />}
-          sx={{
-            "&:hover": {
-              backgroundColor: theme.colors.cyan[5],
-              transform: "scale(1.03)",
-            },
-          }}
+          className={classes.ctaButton}
         >
           CALL FOR EMERGENCY REPAIR
         </Button>
 
-        <Text mt="xl" size="md" color={theme.white} opacity={0.9}>
+        <Text mt="xl" size="md" c={theme.white} opacity={0.9}>
           <Text span fw={600} mr="sm">
             Office:
           </Text>{" "}

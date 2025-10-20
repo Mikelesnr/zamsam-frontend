@@ -1,4 +1,6 @@
 // components/Header.tsx
+
+"use client";
 import React from "react";
 import {
   AppShell,
@@ -9,52 +11,51 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
+import classes from "@/styles/Header.module.css";
 
 const Header: React.FC = () => {
   const theme = useMantineTheme();
 
   return (
-    <AppShell.Header p="md">
-      <Group justify="space-between" align="center" h="100%">
-        <Title
-          order={3}
-          sx={{
-            fontWeight: 700,
-            color: theme.colors.blue[9], // Deep Arctic Blue
-          }}
-        >
+    <AppShell.Header>
+      {/*
+        FIX: Added w="100%" to the Group. This ensures the Group takes up the 
+        full width of the header, allowing justify="space-between" to work
+        correctly to separate the logo and the navigation.
+      */}
+      <Group
+        className={classes.header}
+        justify="space-between"
+        align="center"
+        h="100%"
+        w="100%"
+      >
+        {/* Logo (Left Side) */}
+        <Title order={3} className={classes.logo}>
           Zamsam{" "}
-          <Text
-            span
-            inherit
-            sx={{
-              fontSize: "1.1rem",
-              fontWeight: 500,
-              color: theme.colors.gray[8],
-            }}
-          >
+          <Text span inherit className={classes.logoAccent}>
             Engineering
           </Text>
         </Title>
 
-        <Group gap="lg" visibleFrom="sm">
-          <Anchor href="#services" c="dark" fw={500}>
+        {/* Navigation Group (Right Side) */}
+        <Group className={classes.nav} visibleFrom="sm">
+          <Anchor href="#services" className={classes.navLink}>
             Services
           </Anchor>
-          <Anchor href="#installations" c="dark" fw={500}>
+          <Anchor href="#installations" className={classes.navLink}>
             Installations
           </Anchor>
-          <Anchor href="#repairs" c="dark" fw={500}>
+          <Anchor href="#repairs" className={classes.navLink}>
             Repairs
           </Anchor>
 
           <Button
             component="a"
             href="tel:0800-ZAMSAM"
-            color="cyan" // Cyan Ice
-            variant="light"
+            className={classes.ctaButton}
+            variant="filled"
             radius="md"
-            fw={600}
           >
             CALL NOW
           </Button>

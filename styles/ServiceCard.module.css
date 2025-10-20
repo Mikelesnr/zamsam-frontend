@@ -1,0 +1,63 @@
+/*
+  Styles for the individual service cards, integrating custom design
+  with Mantine's structure.
+*/
+
+/* --- Card Styles (Replaces Card 'sx' prop) --- */
+.card {
+  /* Layout: Ensure the card expands fully and pushes content to the bottom */
+  flex: 1;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Transition and Hover Effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  /* Lift the card slightly on hover */
+  transform: translateY(-5px);
+  /* Apply a strong, branded shadow on hover */
+  box-shadow: 0 10px 20px rgba(0, 51, 102, 0.2); /* Shadow with Primary Blue tint */
+}
+
+/* --- Title Styles (Replaces Title 'sx' prop) --- */
+.cardTitle {
+  color: #00ccff; /* Secondary Accent (Cyan) */
+  /* Border and Spacing */
+  border-bottom: 2px solid #003366; /* Primary Blue border */
+  padding-bottom: 8px; /* Mantine theme.spacing.sm equivalent */
+  margin-bottom: 24px; /* Mantine theme.spacing.xl equivalent */
+}
+
+/* --- List Styles (Customizing Mantine List) --- */
+/* Target the Mantine list container for spacing overrides if needed */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Ensure list items get proper styling */
+.listItem {
+  /* Mantine's ListItem handles size/spacing, but we can set custom color if needed */
+  color: #333333;
+}
+
+/* --- Button Styles (Customizing Mantine Button) --- */
+.cardButton {
+  /* Mantine handles background and radius, but we can enhance hover here */
+  /* Force a smooth transition on background for hover */
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* Base style (Mantine props override this for simple colors, but we keep it here for reference) */
+  background-color: var(--mantine-color-blue-filled);
+}
+
+.cardButton:hover {
+  /* A lighter blue on hover for effect */
+  background-color: #003366 !important; /* Force Primary Blue on hover */
+  color: #ffffff !important;
+}

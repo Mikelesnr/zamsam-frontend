@@ -5,9 +5,6 @@
 /* Zamsam Engineering Color Scheme:
   Primary: Deep Arctic Blue (#003366) 
   Accent: Ice Cyan (#00CCFF)
-  
-  We map these to the Tailwind background/foreground variables 
-  for clean global styling.
 */
 
 /* --- Light Mode (Default) --- */
@@ -20,21 +17,18 @@
   /* Additional custom variables for the accent color */
   --color-primary-blue: #003366;
   --color-accent-cyan: #00ccff;
+
+  /* Fonts are loaded and applied in layout.tsx to the <html> tag */
+  /* Keep only the variables you need for Tailwind's config mapping */
+  --font-roboto: var(--font-roboto);
+  --font-merriweather: var(--font-merriweather);
+  --font-geist-mono: var(--font-geist-mono);
 }
 
-/* @theme inline is for Tailwind to pick up these variables 
-  as utility classes (e.g., text-color-foreground)
+/* --- Tailwind Configuration Removed from here ---
+// OLD: @theme inline { ... }
+// This is now in tailwind.config.js
 */
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  /* Expose custom colors to Tailwind utilities */
-  --color-zamsam-blue: var(--color-primary-blue);
-  --color-zamsam-cyan: var(--color-accent-cyan);
-}
 
 /* --- Dark Mode --- */
 @media (prefers-color-scheme: dark) {
@@ -47,10 +41,29 @@
 }
 
 /* Base Body Styles */
+html {
+  /* Set the background image */
+  background-image: url("/background.png");
+
+  /* Ensure the image covers the entire viewport */
+  background-size: cover;
+
+  /* Fix the image position so it doesn't scroll with content */
+  background-attachment: fixed;
+
+  /* Center the image */
+  background-position: center;
+
+  /* Ensure html is full height */
+  min-height: 100%;
+}
+
+/* You might need to make sure the body is transparent if you have a white default background */
 body {
-  /* Uses the scheme-aware variables */
-  background: var(--background);
-  color: var(--foreground);
-  /* Using a more professional, common sans-serif stack */
-  font-family: "Poppins", "Inter", Arial, Helvetica, sans-serif;
+  /* ... other body styles ... */
+  background-color: transparent;
+  min-height: 100vh;
+
+  /* Set the default site font to Roboto via its CSS variable reference */
+  font-family: var(--font-roboto), sans-serif;
 }

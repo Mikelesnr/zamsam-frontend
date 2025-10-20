@@ -1,9 +1,11 @@
 /* styles/CTA.module.css */
 .ctaSection {
   padding: 4rem 5%;
-  background-color: #003366; /* Primary Blue */
   color: #ffffff;
   text-align: center;
+  height: 500px;
+  align-content: center;
+  background: none;
 }
 
 .ctaHeadline {

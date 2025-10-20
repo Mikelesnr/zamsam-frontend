@@ -9,6 +9,7 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
+import classes from "@/styles/Services.module.css";
 
 // Define the Props for ServiceCard
 interface ServiceCardProps {
@@ -27,48 +28,42 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, items, id }) => {
       padding="xl"
       radius="md"
       withBorder
-      sx={{
-        flex: 1,
-        minHeight: 400,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        transition: "transform 0.3s",
-        "&:hover": {
-          transform: "translateY(-5px)",
-          boxShadow: theme.shadows.xl,
-        },
-      }}
+      // FIXED: Replaced 'sx' with 'className' to apply custom styling and hover effects
+      className={classes.card}
     >
       <div>
         <Title
           order={3}
-          sx={{
-            color: theme.colors.cyan[6], // Secondary Accent
-            borderBottom: `2px solid ${theme.colors.blue[9]}`,
-            paddingBottom: theme.spacing.sm,
-            marginBottom: theme.spacing.xl,
-          }}
+          // FIXED: Replaced 'sx' with 'className' for title styling
+          className={classes.cardTitle}
         >
           {title}
         </Title>
 
         <List
-          spacing="sm"
-          size="md"
+          // Custom list styling moved to CSS module
+          className={classes.list}
           center
+          // The icon is still best managed here as it requires theme colors
           icon={<IconCheck size={18} color={theme.colors.blue[9]} />}
         >
           {items.map((item, index) => (
-            <ListItem key={index}>{item}</ListItem>
+            <ListItem
+              key={index}
+              // Apply list item styling (spacing, color) via CSS module
+              className={classes.listItem}
+            >
+              {item}
+            </ListItem>
           ))}
         </List>
       </div>
 
       <Button
         component="a"
-        href="#contact"
-        color="blue"
+        href={`#${id}-form`} // Added a unique link target for better UX
+        // Apply button class for custom background/hover/transition
+        className={classes.cardButton}
         radius="sm"
         mt="md"
         fullWidth

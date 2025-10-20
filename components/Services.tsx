@@ -5,10 +5,14 @@ import {
   Title,
   Text,
   Container,
-  Grid,
+  SimpleGrid,
+  Card,
+  List,
+  Button,
   useMantineTheme,
 } from "@mantine/core";
-import ServiceCard from "@/components/ServiceCard";
+
+import classes from "@/styles/Services.module.css";
 
 const Services: React.FC = () => {
   const theme = useMantineTheme();
@@ -25,38 +29,62 @@ const Services: React.FC = () => {
     "Service for Working Refrigeration Appliances",
   ];
 
+  const ServiceCard = ({
+    title,
+    items,
+  }: {
+    title: string;
+    items: string[];
+  }) => (
+    <Card shadow="md" padding="lg" radius="md" withBorder>
+      <Title order={3} mb="md" style={{ color: "#00ccff" }}>
+        {title}
+      </Title>
+      <List spacing="sm" size="md" center>
+        {items.map((item, index) => (
+          <List.Item key={index}>{item}</List.Item>
+        ))}
+      </List>
+      <Button mt="lg" color="blue" variant="filled">
+        Get Service
+      </Button>
+    </Card>
+  );
+
   return (
     <Box
       id="services"
-      py={theme.spacing.xl * 3}
-      bg={theme.colors.gray[1]}
-      sx={{ textAlign: "center" }}
+      // Use the CSS Module class for section padding, background, and text alignment
+      className={classes.servicesSection}
     >
       <Container size="lg">
-        <Title order={2} mb="md" color="blue.9">
+        <Title
+          order={2}
+          // Use the CSS Module class for margin and color (sectionTitle)
+          className={classes.sectionTitle}
+          mb="md"
+        >
           Our Expert Cooling Services
         </Title>
-        <Text size="lg" mb={theme.spacing.xl * 2}>
+        <Text
+          size="lg"
+          // Use the CSS Module class for font size, color, and margin-bottom (sectionSubtitle)
+          className={classes.sectionSubtitle}
+        >
           We handle everything from new **installations** to reliable emergency
           **repairs**.
         </Text>
 
-        <Grid gutter="xl">
-          <Grid.Col span={{ base: 12, sm: 6 }}>
+        {/* Use a wrapper class around the Grid for layout control (cardContainer) */}
+        <div>
+          <div className={classes.cardContainer}>
             <ServiceCard
-              id="installations"
               title="Installations & Upgrades"
               items={installations}
             />
-          </Grid.Col>
-          <Grid.Col span={{ base: 12, sm: 6 }}>
-            <ServiceCard
-              id="repairs"
-              title="Repairs & Servicing"
-              items={repairs}
-            />
-          </Grid.Col>
-        </Grid>
+            <ServiceCard title="Repairs & Servicing" items={repairs} />
+          </div>
+        </div>
       </Container>
     </Box>
   );

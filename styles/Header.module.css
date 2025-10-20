@@ -1,5 +1,9 @@
-/* styles/Header.module.css */
+/*
+  This CSS Module controls the overall layout and appearance of the AppShell.Header.
+  It ensures the logo is on the left and the navigation links are on the right.
+*/
 .header {
+  /* Layout: Puts logo and nav on opposite ends */
   display: flex;
   justify-content: space-between;
   align-items: center;
