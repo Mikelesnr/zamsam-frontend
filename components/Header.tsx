@@ -32,14 +32,14 @@ const Header: React.FC = () => {
 
         {/* Navigation Group (Right Side) */}
         <Group className={classes.nav} visibleFrom="sm">
-          <Anchor href="#services" className={classes.navLink}>
-            Services
+          <Anchor href="/" className={classes.navLink}>
+            Home
           </Anchor>
-          <Anchor href="#installations" className={classes.navLink}>
-            Installations
+          <Anchor href="/about" className={classes.navLink}>
+            About Us
           </Anchor>
-          <Anchor href="#repairs" className={classes.navLink}>
-            Repairs
+          <Anchor href="#contact" className={classes.navLink}>
+            Contact Us
           </Anchor>
 
           <Button
