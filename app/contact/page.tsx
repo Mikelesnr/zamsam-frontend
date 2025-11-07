@@ -42,7 +42,7 @@ export default function ContactPage() {
       await api.post("/api/contact", values);
       setSubmitted(true);
       form.reset();
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("❌ Contact form submission failed:", err);
       setError("Something went wrong. Please try again later.");
     }
@@ -121,7 +121,7 @@ export default function ContactPage() {
                       size="md"
                       radius="xl"
                       style={{
-                        backgroundColor: "rgba(0, 0, 0, 0.4)", // transparent black
+                        backgroundColor: "rgba(0, 0, 0, 0.4)",
                         color: "#ffffff",
                         padding: "0.6rem 1.5rem",
                         borderRadius: "999px",
@@ -132,7 +132,7 @@ export default function ContactPage() {
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.backgroundColor =
-                          "rgba(0, 123, 255, 0.2)"; // transparent blue
+                          "rgba(0, 123, 255, 0.2)";
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.backgroundColor =
@@ -175,25 +175,26 @@ export default function ContactPage() {
             <SectionTitle title="Visit Us" titleColor="#ffffff" />
             <div
               style={{
-                position: "relative",
-                paddingBottom: "56.25%",
-                height: 0,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                paddingTop: "1rem",
+                paddingBottom: "2rem",
               }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.9999999999995!2d31.053!3d-17.829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a5f5f5f5f5f5%3A0x123456789abcdef!2sZamsam%20Engineering!5e0!3m2!1sen!2szw!4v1234567890"
-                width="100%"
-                height="100%"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d721.6209735479997!2d31.104307845737015!3d-17.81352205474739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931bb9e9e03b89f%3A0xa07a5f0ea326c0cb!2sZamsam%20Engineering!5e1!3m2!1sen!2szw!4v1762531007938!5m2!1sen!2szw"
+                width="600"
+                height="450"
                 style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
                   border: 0,
                   borderRadius: rem(12),
+                  boxShadow: "0 0 12px rgba(0, 0, 0, 0.3)",
                 }}
                 allowFullScreen
                 loading="lazy"
-              ></iframe>
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </Group>

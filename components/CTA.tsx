@@ -1,6 +1,6 @@
 // components/CTA.tsx
 import React from "react";
-import { Box, Container, Title, Text, Button } from "@mantine/core";
+import { Box, Container, Text, Button } from "@mantine/core";
 import { IconPhoneCall } from "@tabler/icons-react";
 import classes from "@/styles/CTA.module.css";
 import SectionTitle from "./SectionTitle";

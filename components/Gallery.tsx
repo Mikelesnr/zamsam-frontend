@@ -1,5 +1,4 @@
 // components/Gallery.tsx
-import { Title, Text } from "@mantine/core";
 import classes from "@/styles/Gallery.module.css";
 import Image from "next/image";
 import SectionTitle from "./SectionTitle";
