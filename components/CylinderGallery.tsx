@@ -1,6 +1,6 @@
-// components/CylinderGallery.tsx
 import styles from "@/styles/CylinderGallery.module.css";
 import SectionTitle from "./SectionTitle";
+import Image from "next/image";
 
 type Props = {
   images: string[];
@@ -20,7 +20,13 @@ export default function CylinderGallery({ images }: Props) {
         <div className={styles.box}>
           {images.map((src, i) => (
             <span key={i} style={{ "--i": i + 1 } as React.CSSProperties}>
-              <img src={src} alt={`Gallery image ${i + 1}`} />
+              <Image
+                src={src}
+                alt={`Gallery image ${i + 1}`}
+                width={400}
+                height={300}
+                style={{ objectFit: "cover", borderRadius: "8px" }}
+              />
             </span>
           ))}
         </div>

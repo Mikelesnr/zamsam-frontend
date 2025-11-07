@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { InternalAxiosRequestConfig } from "axios";
 import Cookies from "js-cookie";
 
 const api = axios.create({
@@ -27,16 +27,20 @@ async function fetchCsrfCookie() {
 }
 
 // ✅ Manually attach token to header before each request
-api.interceptors.request.use(async (config: any) => {
-  await fetchCsrfCookie();
+api.interceptors.request.use(
+  async (
+    config: InternalAxiosRequestConfig
+  ): Promise<InternalAxiosRequestConfig> => {
+    await fetchCsrfCookie();
 
-  const token = Cookies.get("XSRF-TOKEN");
-  if (token) {
-    config.headers = config.headers ?? {};
-    config.headers["X-XSRF-TOKEN"] = decodeURIComponent(token);
+    const token = Cookies.get("XSRF-TOKEN");
+    if (token) {
+      config.headers = config.headers ?? {};
+      config.headers["X-XSRF-TOKEN"] = decodeURIComponent(token);
+    }
+
+    return config;
   }
-
-  return config;
-});
+);
 
 export default api;
