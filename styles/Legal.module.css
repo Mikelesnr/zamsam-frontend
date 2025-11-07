@@ -1,0 +1,92 @@
+/* styles/Legal.module.css */
+
+/* General container to limit width and center content */
+.legalContainer {
+  max-width: 900px; /* Standard reading width */
+  margin: 50px auto 80px auto; /* Top/bottom padding and center */
+  padding: 30px 40px; /* Increased padding inside the container */
+  line-height: 1.6;
+
+  /* --- NEW READABILITY STYLES --- */
+  color: #ffffff; /* Change text color to white */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Semi-transparent dark background (70% opacity) */
+  border-radius: 8px; /* Optional: Soften the corners of the overlay box */
+  /* --- END NEW STYLES --- */
+}
+
+/* Page Title (H1) */
+.title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  /* You will need to customize this color to a light version of your brand color: */
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Lighter border for contrast */
+  padding-bottom: 10px;
+}
+
+/* Section Subtitles (H2) */
+.subtitle {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  /* You will need to customize this color to a light version of your secondary color: */
+  color: #add8e6; /* Placeholder for a light/pastel color */
+}
+
+/* Main Paragraphs */
+.legalContainer p {
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+/* List Items (for the Privacy Policy use cases) */
+.legalContainer ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.legalContainer li {
+  margin-bottom: 5px;
+}
+
+/* Intro paragraph */
+.intro {
+  font-style: italic;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Very light, transparent background */
+  border-left: 4px solid #add8e6; /* Use your light secondary color */
+}
+
+/* Date Footer */
+.date {
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #cccccc; /* Light gray for subtle contrast */
+  text-align: right;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+  .legalContainer {
+    margin-top: 20px;
+  }
+  .title {
+    font-size: 2em;
+  }
+  .subtitle {
+    font-size: 1.3em;
+  }
+}

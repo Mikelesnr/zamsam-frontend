@@ -34,6 +34,30 @@ export default function RootLayout({
     <html lang="en" className={`${roboto.variable} ${merriweather.variable}`}>
       <body>
         <MantineProviderWrapper>{children}</MantineProviderWrapper>
+
+        {/* /////////////////////////////////////////////////////////////////////
+            /// CHATBASE WIDGET EMBED (FIXED VERSION)                      ///
+            ///////////////////////////////////////////////////////////////////// */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.chatbaseConfig = {
+                chatbotId: "${process.env.NEXT_PUBLIC_CHATBASE_ID}"
+              };
+
+              (function () {
+                var s = document.createElement("script");
+                s.src = "https://www.chatbase.co/embed.min.js";
+                s.async = true;
+                s.defer = true;
+                document.body.appendChild(s);
+              })();
+            `,
+          }}
+        />
+        {/* /////////////////////////////////////////////////////////////////////
+            /// END CHATBASE WIDGET EMBED                                    ///
+            ///////////////////////////////////////////////////////////////////// */}
       </body>
     </html>
   );
