@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             boxShadow: theme.shadows.xl,
           }}
         >
-          Request a Free Consultation
+          Request a Consultation
         </Button>
 
         <Text mt="xl" size="sm" opacity={0.8}>
