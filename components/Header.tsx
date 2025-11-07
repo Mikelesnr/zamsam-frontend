@@ -44,7 +44,7 @@ const Header: React.FC = () => {
 
           <Button
             component="a"
-            href="tel:0800-ZAMSAM"
+            href="tel:+263773296227"
             className={classes.ctaButton}
             variant="filled"
             radius="md"
