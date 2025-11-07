@@ -3,11 +3,10 @@
 import { AppShell } from "@mantine/core"; // 👈 FIX: Removed 'type Metadata' from Mantine import
 
 // --- Imports for Page Content ---
-import Header from "@/components/Header";
+
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
 import CylinderGallery from "@/components/CylinderGallery";
 
 const Home: React.FC = () => {
@@ -31,16 +30,19 @@ const Home: React.FC = () => {
       header={{ height: 60 }} // Define header height for proper content offset
       padding="md"
     >
-      {/* The Header component contains <AppShell.Header> internally */}
-      <Header />
-
       <AppShell.Main>
         <main>
-          <Hero />
+          <Hero
+            title="Expert Refrigeration & Air Conditioning Solutions"
+            subtitle="Reliable Cold Room Installation, AC Repairs, and Commercial Servicing for all your cooling needs."
+            buttonText="Request a Consultation"
+            buttonLink="#contact"
+            note="Servicing All Working Refrigeration Appliances"
+          />
+
           <Services />
           <CylinderGallery images={galleryImages} />
           <CTA />
-          <Footer />
         </main>
       </AppShell.Main>
     </AppShell>
