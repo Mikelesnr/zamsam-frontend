@@ -16,7 +16,7 @@ const PrivacyPolicyPage = () => {
 
       <p className={styles.intro}>
         This policy explains how Zamsam Engineering handles your personal
-        information submitted via our website's contact form.
+        information submitted via our website&apos;s contact form.
       </p>
 
       <section className={styles.section}>
@@ -24,14 +24,15 @@ const PrivacyPolicyPage = () => {
           1. Information We Collect and How It Is Used
         </h2>
         <p>
-          When you use the **Contact Us** form on our website, the information
-          you provide (Name, Email Address, Phone Number, and Inquiry Details)
-          is **not stored in a permanent database**.
+          When you use the <strong>Contact Us</strong> form on our website, the
+          information you provide (Name, Email Address, Phone Number, and
+          Inquiry Details) is{" "}
+          <strong>not stored in a permanent database</strong>.
         </p>
         <p>
-          Instead, your submission generates an **email record** that is sent
-          directly to Zamsam Engineering staff. This email record constitutes
-          the entirety of the personal data trail we keep.
+          Instead, your submission generates an <strong>email record</strong>{" "}
+          that is sent directly to Zamsam Engineering staff. This email record
+          constitutes the entirety of the personal data trail we keep.
         </p>
       </section>
 
@@ -42,9 +43,12 @@ const PrivacyPolicyPage = () => {
           purposes:
         </p>
         <ul>
-          <li>To **respond to your service requests** and inquiries.</li>
           <li>
-            To **schedule appointments** and provide quotes for our services.
+            To <strong>respond to your service requests</strong> and inquiries.
+          </li>
+          <li>
+            To <strong>schedule appointments</strong> and provide quotes for our
+            services.
           </li>
           <li>To communicate with you regarding your service job.</li>
         </ul>
@@ -53,10 +57,10 @@ const PrivacyPolicyPage = () => {
       <section className={styles.section}>
         <h2 className={styles.subtitle}>3. Data Sharing</h2>
         <p>
-          We **do not sell, trade, or otherwise transfer** your personally
-          identifiable information to outside parties. Your information is kept
-          confidential and used only internally by Zamsam Engineering staff
-          relevant to your service request.
+          We <strong>do not sell, trade, or otherwise transfer</strong> your
+          personally identifiable information to outside parties. Your
+          information is kept confidential and used only internally by Zamsam
+          Engineering staff relevant to your service request.
         </p>
       </section>
 
