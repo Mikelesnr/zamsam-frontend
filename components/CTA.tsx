@@ -1,24 +1,24 @@
 // components/CTA.tsx
 import React from "react";
-import {
-  Box,
-  Container,
-  Title,
-  Text,
-  Button,
-} from "@mantine/core";
+import { Box, Container, Title, Text, Button } from "@mantine/core";
 import { IconPhoneCall } from "@tabler/icons-react";
 import classes from "@/styles/CTA.module.css";
+import SectionTitle from "./SectionTitle";
 
 const CTA: React.FC = () => {
   // const theme = useMantineTheme();
 
   return (
     <Box id="contact" py={160} ta="center" className={classes.ctaSection}>
-      <Container size="md">
-        <Title order={2} mb="md" c="cyan.4">
-          Need Urgent Service? Call Zamsam Engineering Now.
-        </Title>
+      <Container size="md" pb="xl">
+        <SectionTitle
+          title="Need Urgent Service?"
+          subtitle="Call Zamsam Engineering Now."
+          align="center"
+          titleColor="#fffefeff"
+          subtitleColor="#ffffffff"
+        />
+
         <Text size="lg" mb="xl" fw={300}>
           Fast, reliable repairs and maintenance to keep your systems running
           efficiently.
@@ -26,7 +26,7 @@ const CTA: React.FC = () => {
 
         <Button
           component="a"
-          href="tel:0800-ZAMSAM"
+          href="tel:+263773296227"
           color="cyan"
           size="xl"
           radius="lg"
@@ -41,11 +41,11 @@ const CTA: React.FC = () => {
           <Text span fw={600} mr="sm">
             Office:
           </Text>{" "}
-          **0800-ZAMSAM** |
+          +263 773 296 227 |
           <Text span fw={600} mx="sm">
             Email:
           </Text>{" "}
-          info@zamsamengineering.com
+          zamsamrefrigeration@gmail.com
         </Text>
       </Container>
     </Box>

@@ -2,6 +2,7 @@
 import { Title, Text } from "@mantine/core";
 import classes from "@/styles/Gallery.module.css";
 import Image from "next/image";
+import SectionTitle from "./SectionTitle";
 
 const galleryImages = [
   "/images/zamsam-cold-room.jpg",
@@ -14,12 +15,13 @@ const galleryImages = [
 
 const Gallery = () => (
   <div className={classes.galleryContainer} id="our-work">
-    <Title order={2} mb="sm" style={{ color: "#003366" }}>
-      Our Work
-    </Title>
-    <Text size="lg" mb="xl" style={{ color: "#333" }}>
-      A glimpse into our installations, repairs, and service excellence.
-    </Text>
+    <SectionTitle
+      title="Our Work"
+      subtitle="A glimpse into our installations, repairs, and service excellence."
+      align="left"
+      titleColor="#0c0c0cff"
+      subtitleColor="#0c0c0cff"
+    />
 
     <div className={classes.gallery}>
       {galleryImages.map((src, index) => (
