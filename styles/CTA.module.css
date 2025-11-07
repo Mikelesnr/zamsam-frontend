@@ -1,13 +1,13 @@
 /* styles/CTA.module.css */
 .ctaSection {
-  padding: 4rem 5%;
   color: #ffffff;
   text-align: center;
-  height: 500px;
+  height: fit-content;
   align-content: center;
   background-color: rgba(0, 51, 102, 0.7);
   backdrop-filter: blur(4px); /* Optional: subtle blur */
   position: relative;
+  padding-bottom: 2rem !important;
 }
 
 .ctaHeadline {
