@@ -38,7 +38,7 @@ const Header: React.FC = () => {
           <Anchor href="/about" className={classes.navLink}>
             About Us
           </Anchor>
-          <Anchor href="#contact" className={classes.navLink}>
+          <Anchor href="/contact" className={classes.navLink}>
             Contact Us
           </Anchor>
 

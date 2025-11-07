@@ -2,38 +2,38 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const api = axios.create({
-  baseURL: "/api", // ✅ uses Next.js proxy
+  baseURL: "/api", // Uses Next.js proxy
   withCredentials: true,
   headers: {
     Accept: "application/json",
   },
 });
 
-api.interceptors.request.use((config) => {
-  config.headers = config.headers || {};
-  let token = Cookies.get("XSRF-TOKEN");
+// ✅ Manually fetch CSRF cookie if missing
+let csrfFetched = false;
 
-  if (!token) {
-    axios
-      .get("/api/sanctum/csrf-cookie", {
+async function fetchCsrfCookie() {
+  if (!csrfFetched && !Cookies.get("XSRF-TOKEN")) {
+    try {
+      await axios.get("/api/sanctum/csrf-cookie", {
         withCredentials: true,
-        headers: {
-          Accept: "application/json",
-        },
-      })
-      .then(() => {
-        token = Cookies.get("XSRF-TOKEN");
-        if (token) {
-          (config.headers as Record<string, string>)["X-XSRF-TOKEN"] =
-            decodeURIComponent(token);
-        }
-      })
-      .catch((err) => {
-        console.error("❌ Failed to fetch CSRF cookie:", err);
+        headers: { Accept: "application/json" },
       });
-  } else if (token) {
-    (config.headers as Record<string, string>)["X-XSRF-TOKEN"] =
-      decodeURIComponent(token);
+      csrfFetched = true;
+    } catch (err) {
+      console.error("❌ Failed to fetch CSRF cookie:", err);
+    }
+  }
+}
+
+// ✅ Manually attach token to header before each request
+api.interceptors.request.use(async (config: any) => {
+  await fetchCsrfCookie();
+
+  const token = Cookies.get("XSRF-TOKEN");
+  if (token) {
+    config.headers = config.headers ?? {};
+    config.headers["X-XSRF-TOKEN"] = decodeURIComponent(token);
   }
 
   return config;

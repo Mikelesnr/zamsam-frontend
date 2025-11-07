@@ -4,9 +4,9 @@ import TeamSection from "@/components/TeamSection";
 
 export default function AboutPage() {
   return (
-    <main className="relative text-[#f0f0f0]">
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-20 z-0" />
+    <main className="relative text-[#f0f0f0] min-h-screen">
+      {/* Background overlay for readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-300 backdrop-blur-sm z-0" />
 
       {/* Content */}
       <div className="relative z-10">
@@ -21,7 +21,7 @@ export default function AboutPage() {
 
         {/* About Section */}
         <section className="py-16 px-6">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center bg-grey bg-opacity-20 backdrop-blur-md rounded-xl p-8">
             <SectionTitle
               title="Who We Are"
               subtitle="Reliable, certified, and customer-focused — our technicians bring years of experience to every job."
@@ -45,11 +45,13 @@ export default function AboutPage() {
         </section>
 
         {/* Team Section */}
-        <TeamSection />
+        <div className="px-6">
+          <TeamSection />
+        </div>
 
         {/* Services Section */}
         <section id="services" className="py-20 px-6">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto bg-black bg-opacity-30 backdrop-blur-md rounded-xl p-8">
             <SectionTitle
               title="Our Services"
               subtitle="Comprehensive cooling solutions for homes and businesses."
