@@ -14,11 +14,11 @@ export default function TeamCard({ name, role, image }: Props) {
       radius="lg"
       withBorder
       style={{
-        backgroundColor: "#0077b6", // lighter blue
+        backgroundColor: "rgba(0, 119, 182, 0.5)", 
         color: "#ffffff",
         width: 260,
         flexShrink: 0,
-        borderRadius: "16px", // extra rounding
+        borderRadius: "16px",
         boxShadow: "0 8px 20px rgba(0, 0, 0, 0.25)",
         transition: "transform 0.3s ease",
       }}
