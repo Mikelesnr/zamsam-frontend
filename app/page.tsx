@@ -11,18 +11,18 @@ import CylinderGallery from "@/components/CylinderGallery";
 
 const Home: React.FC = () => {
   const galleryImages = [
-    "/images/20240306_155904.jpg",
-    "/images/IMG_20211113_115411.jpg",
-    "/images/IMG_20210602_145348.jpg",
-    "/images/20251030_144428.jpg",
-    "/images/20251030_130902.jpg",
-    "/images/20250327_120308.jpg",
-    "/images/20221123_124848.jpg",
-    "/images/20230331_131544.jpg",
-    "/images/20240306_155904.jpg",
-    "/images/20250327_120316.jpg",
-    "/images/20250327_121311.jpg",
-    "/images/20251030_095815.jpg",
+    "/images/home/20240306_155904.jpg",
+    "/images/home/IMG_20211113_115411.jpg",
+    "/images/home/IMG_20210602_145348.jpg",
+    "/images/home/20251030_144428.jpg",
+    "/images/home/20251030_130902.jpg",
+    "/images/home/20250327_120308.jpg",
+    "/images/home/20221123_124848.jpg",
+    "/images/home/20230331_131544.jpg",
+    "/images/home/20240306_155904.jpg",
+    "/images/home/20250327_120316.jpg",
+    "/images/home/20250327_121311.jpg",
+    "/images/home/20251030_095815.jpg",
   ];
 
   return (
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
             title="Expert Refrigeration & Air Conditioning Solutions"
             subtitle="Reliable Cold Room Installation, AC Repairs, and Commercial Servicing for all your cooling needs."
             buttonText="Request a Consultation"
-            buttonLink="#contact"
+            buttonLink="/contact"
             note="Servicing All Working Refrigeration Appliances"
           />
 
