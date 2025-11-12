@@ -1,6 +1,6 @@
 import SectionTitle from "./SectionTitle";
 import TeamCarousel from "./TeamCarousel";
-import Image from "next/image";
+import TeamCircleLayout from "./TeamCircleLayout";
 
 const teamMembers = [
   {
@@ -34,7 +34,7 @@ export default function TeamSection() {
   return (
     <section
       id="team"
-      className="py-20 px-6 relative z-10"
+      className="py-20 px-6 relative z-10 rounded-xl"
       style={{
         backgroundColor: "rgba(28, 35, 41, 0.7)", // semi-transparent blue
         backdropFilter: "blur(6px)", // optional: frosted glass effect
@@ -51,13 +51,16 @@ export default function TeamSection() {
 
         {/* Main team image only on tablet and up */}
         <div className="hidden md:block mt-10 mb-6">
-          <Image
-            src="/images/team-image.png"
-            alt="Zamsam Engineering Team"
-            width={800}
-            height={500}
-            className="rounded-lg shadow-lg mx-auto"
-          />
+          <TeamCircleLayout
+  centerImage="/images/about/michael.png"
+  edgeImages={[
+    "/images/about/monica.png",
+    "/images/about/thomas.png",
+    "/images/about/lisa.png",
+    "/images/about/mike.png",
+  ]}
+  backgroundImage="/refrigeration-hero.jpeg"
+/>
         </div>
 
         <TeamCarousel members={teamMembers} />

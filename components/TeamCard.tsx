@@ -14,7 +14,7 @@ export default function TeamCard({ name, role, image }: Props) {
       radius="lg"
       withBorder
       style={{
-        backgroundColor: "rgba(0, 119, 182, 0.5)", 
+        backgroundColor: "rgba(0, 119, 182, 0.3)", 
         color: "#ffffff",
         width: 260,
         flexShrink: 0,
@@ -24,6 +24,7 @@ export default function TeamCard({ name, role, image }: Props) {
       }}
       className="hover:scale-105"
     >
+      <div className="py-2">
       <div className="flex justify-center mb-4">
         <Image
           src={image}
@@ -37,14 +38,21 @@ export default function TeamCard({ name, role, image }: Props) {
             objectFit: "cover",
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
           }}
-        />
+          />
+          </div>
       </div>
 
       <Stack align="center" gap="xs">
         <Text size="lg" fw={700} c="#caf0f8">
           {name}
         </Text>
-        <Text size="sm" opacity={0.85}>
+        <Text size="sm" opacity={0.55}
+        style={{
+          height: "4rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}>
           {role}
         </Text>
       </Stack>

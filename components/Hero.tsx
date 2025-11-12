@@ -13,7 +13,7 @@ export default function Hero({
   title,
   subtitle,
   buttonText = "Learn More",
-  buttonLink = "#",
+  buttonLink = "/about",
   note,
 }: Props) {
   return (

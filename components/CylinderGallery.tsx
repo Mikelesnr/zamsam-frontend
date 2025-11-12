@@ -8,7 +8,7 @@ type Props = {
 
 export default function CylinderGallery({ images }: Props) {
   return (
-    <div className={styles.galleryContainer}>
+    <div className={styles.galleryContainer} >
       <SectionTitle
         title="Our Work"
         subtitle="A glimpse into our installations, repairs, and service excellence."
