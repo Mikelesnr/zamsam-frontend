@@ -14,16 +14,17 @@ export default function TeamCard({ name, role, image }: Props) {
       radius="lg"
       withBorder
       style={{
-        backgroundColor: "#0077b6", // lighter blue
+        backgroundColor: "rgba(0, 119, 182, 0.3)", 
         color: "#ffffff",
         width: 260,
         flexShrink: 0,
-        borderRadius: "16px", // extra rounding
+        borderRadius: "16px",
         boxShadow: "0 8px 20px rgba(0, 0, 0, 0.25)",
         transition: "transform 0.3s ease",
       }}
       className="hover:scale-105"
     >
+      <div className="py-2">
       <div className="flex justify-center mb-4">
         <Image
           src={image}
@@ -37,14 +38,21 @@ export default function TeamCard({ name, role, image }: Props) {
             objectFit: "cover",
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
           }}
-        />
+          />
+          </div>
       </div>
 
       <Stack align="center" gap="xs">
         <Text size="lg" fw={700} c="#caf0f8">
           {name}
         </Text>
-        <Text size="sm" opacity={0.85}>
+        <Text size="sm" opacity={0.55}
+        style={{
+          height: "4rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}>
           {role}
         </Text>
       </Stack>

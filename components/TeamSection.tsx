@@ -1,43 +1,45 @@
 import SectionTitle from "./SectionTitle";
 import TeamCarousel from "./TeamCarousel";
-import Image from "next/image";
+import TeamCircleLayout from "./TeamCircleLayout";
 
 const teamMembers = [
   {
     name: "Michael Mwanza Snr",
     role: "Director",
-    image: "/images/team-member.png",
+    image: "/images/about/michael.png",
   },
   {
     name: "Monica Mwanza",
     role: "Director",
-    image: "/images/team-member.png",
+    image: "/images/about/monica.png",
   },
   {
     name: "Thomas Manyange",
     role: "Senior Technician",
-    image: "/images/team-member.png",
+    image: "/images/about/thomas.png",
   },
   {
-    name: "Placeholder 1",
+    name: "Lissa Chidhumo",
     role: "Technician",
-    image: "/images/team-member.png",
-  },
-  {
-    name: "Placeholder 2",
-    role: "Technician",
-    image: "/images/team-member.png",
+    image: "/images/about/lisa.png",
   },
   {
     name: "Michael Mwanza Jnr",
     role: "Site Management and Internal Systems Support",
-    image: "/images/team-member.png",
+    image: "/images/about/mike.png",
   },
 ];
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-20 px-6 bg-transparent relative z-10">
+    <section
+      id="team"
+      className="py-20 px-6 relative z-10 rounded-xl"
+      style={{
+        backgroundColor: "rgba(28, 35, 41, 0.7)", // semi-transparent blue
+        backdropFilter: "blur(6px)", // optional: frosted glass effect
+      }}
+    >
       <div className="max-w-5xl mx-auto text-center">
         <SectionTitle
           title="Meet Our Team"
@@ -49,13 +51,16 @@ export default function TeamSection() {
 
         {/* Main team image only on tablet and up */}
         <div className="hidden md:block mt-10 mb-6">
-          <Image
-            src="/images/team-image.png"
-            alt="Zamsam Engineering Team"
-            width={800}
-            height={500}
-            className="rounded-lg shadow-lg mx-auto"
-          />
+          <TeamCircleLayout
+  centerImage="/images/about/michael.png"
+  edgeImages={[
+    "/images/about/monica.png",
+    "/images/about/thomas.png",
+    "/images/about/lisa.png",
+    "/images/about/mike.png",
+  ]}
+  backgroundImage="/refrigeration-hero.jpeg"
+/>
         </div>
 
         <TeamCarousel members={teamMembers} />
