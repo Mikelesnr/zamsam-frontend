@@ -35,7 +35,9 @@ export default function RootLayout({
     <html lang="en" className={`${roboto.variable} ${merriweather.variable}`}>
       <body>
         <MantineProviderWrapper>{children}</MantineProviderWrapper>
+        <div id="chatbase-chatbot-container">
         <ChatbaseEmbed />
+        </div>
       </body>
     </html>
   );
