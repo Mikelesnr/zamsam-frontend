@@ -37,6 +37,13 @@
   transition: transform 0.2s, background-color 0.3s;
 }
 
+.ctaText{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+
 .ctaButton:hover {
   background-color: #0099cc;
   transform: scale(1.03);

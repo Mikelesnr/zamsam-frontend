@@ -31,10 +31,11 @@ const CTA: React.FC = () => {
           size="xl"
           radius="lg"
           fw={800}
-          leftSection={<IconPhoneCall size={24} />}
           className={classes.ctaButton}
         >
-          CALL FOR EMERGENCY REPAIR
+          <span className={classes.ctaText}>
+          <IconPhoneCall size={24} /> CALL FOR EMERGENCY REPAIR
+          </span>
         </Button>
 
         <Text mt="xl" size="md" opacity={0.9}>

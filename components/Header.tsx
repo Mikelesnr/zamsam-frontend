@@ -75,7 +75,9 @@ const Header: React.FC = () => {
             variant="filled"
             radius="md"
           >
-            CALL NOW
+             <span className={classes.navText}>
+          <IconPhoneCall size={24} /> CALL NOW
+          </span>
           </Button>
         </Group>
 
@@ -116,7 +118,9 @@ const Header: React.FC = () => {
             fullWidth
             mt="md"
           >
-            CALL NOW
+           <span className={classes.navText}>
+          <IconPhoneCall size={20} /> CALL NOW
+          </span>
           </Button>
         </div>
       )}
