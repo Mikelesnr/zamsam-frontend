@@ -11,18 +11,25 @@ import CylinderGallery from "@/components/CylinderGallery";
 
 const Home: React.FC = () => {
   const galleryImages = [
-    "/images/home/20240306_155904.jpg",
-    "/images/home/IMG_20211113_115411.jpg",
-    "/images/home/IMG_20210602_145348.jpg",
-    "/images/home/20251030_144428.jpg",
-    "/images/home/20251030_130902.jpg",
-    "/images/home/20250327_120308.jpg",
-    "/images/home/20221123_124848.jpg",
-    "/images/home/20230331_131544.jpg",
-    "/images/home/20240306_155904.jpg",
-    "/images/home/20250327_120316.jpg",
-    "/images/home/20250327_121311.jpg",
-    "/images/home/20251030_095815.jpg",
+    "/images/home/zamsam1.jpg",
+    "/images/home/zamsam2.jpg",
+    "/images/home/zamsam3.jpg",
+    "/images/home/zamsam4.jpg",
+    "/images/home/zamsam5.jpg",
+    "/images/home/zamsam6.jpg",
+    "/images/home/zamsam7.jpg",
+    "/images/home/zamsam8.jpg",
+    "/images/home/zamsam9.jpg",
+    "/images/home/zamsam10.jpg",
+    "/images/home/zamsam11.jpg",
+    "/images/home/zamsam12.jpg",
+    "/images/home/zamsam13.jpg",
+    "/images/home/zamsam14.jpg",
+    // "/images/home/zamsam15.jpg",
+    // "/images/home/zamsam16.jpg",
+    // "/images/home/zamsam17.jpg",
+    // "/images/home/zamsam18.jpg",
+    // "/images/home/zamsam19.jpg",
   ];
 
   return (

@@ -45,19 +45,19 @@ export default function CylinderGallery({ images }: Props) {
       {/* Desktop Cylinder Gallery */}
       {!isMobile && (
         <div className={styles.gallery} id="our-work">
-          <div className={styles.box}>
-            {images.map((src, i) => (
-              <span key={i} style={{ "--i": i + 1 } as React.CSSProperties}>
-                <Image
-                  src={src}
-                  alt={`Gallery image ${i + 1}`}
-                  width={400}
-                  height={300}
-                  style={{ objectFit: "cover", borderRadius: "8px" }}
-                />
-              </span>
-            ))}
-          </div>
+          <div className={styles.box} style={{ "--total": images.length } as React.CSSProperties}>
+  {images.map((src, i) => (
+    <span key={i} style={{ "--i": i } as React.CSSProperties}>
+      <Image
+        src={src}
+        alt={`Gallery image ${i + 1}`}
+        width={400}
+        height={300}
+        style={{ objectFit: "cover", borderRadius: "8px" }}
+      />
+    </span>
+  ))}
+</div>
         </div>
       )}
 

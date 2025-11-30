@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import SectionTitle from "@/components/SectionTitle";
 import TeamSection from "@/components/TeamSection";
-import { alpha } from "@mantine/core";
 
 export default function AboutPage() {
   return (
