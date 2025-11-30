@@ -39,10 +39,19 @@ export default function ContactPage() {
     setError(null);
     setSubmitted(false);
     try {
-      await api.post("/api/contact", values);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send message");
+      }
+
       setSubmitted(true);
       form.reset();
-    } catch (err: unknown) {
+    } catch (err) {
       console.error("❌ Contact form submission failed:", err);
       setError("Something went wrong. Please try again later.");
     }
