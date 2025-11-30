@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import SectionTitle from "@/components/SectionTitle";
 import TeamSection from "@/components/TeamSection";
@@ -40,6 +41,50 @@ export default function AboutPage() {
             </p>
           </div>
         </section>
+
+                {/* Mobility Section */}
+        <section id="mobility" className="py-20 px-6">
+          <div
+            className="max-w-5xl mx-auto rounded-xl p-8 flex flex-col md:flex-row items-center gap-8"
+            style={{ backgroundColor: "rgba(0,0,0,0.9)" }}
+          >
+            {/* Text */}
+            <div className="flex-1 text-center md:text-left">
+              <SectionTitle
+                title="Mobile & Fully Equipped"
+                subtitle="Our technicians are always on the move — bringing expertise and equipment directly to you."
+                titleColor="#00ccff"
+                subtitleColor="#f0f0f0"
+                align="left"
+              />
+              <p className="text-lg mt-6">
+                Zamsam Engineering operates from a dedicated workshop where
+                complex repairs and system builds are handled with care. This
+                base ensures our technicians have access to specialized tools
+                and resources for high‑quality results.
+              </p>
+              <p className="text-lg mt-4">
+                Beyond the workshop, our team is fully prepared for outside
+                jobs. With vehicles stocked for service calls, we bring the
+                same level of professionalism and equipment directly to your
+                site — whether it’s a home, office, or industrial facility.
+              </p>
+            </div>
+
+            {/* Vehicle Image */}
+            <div className="flex-1 flex justify-center">
+              <Image
+                src="/images/about/zamsamtruck.jpg" // replace with your branded truck image path
+                alt="Zamsam Service Truck"
+                width={500}
+                height={300}
+                className="rounded-lg border-4 border-[#00ccff]"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
+        </section>
+
 
         {/* Team Section */}
         <div className="px-6 rounded-xl">
