@@ -12,6 +12,9 @@ export default function Footer() {
             Phone: <a href="tel:+263773296227">+263 773 296 227</a>
           </p>
           <p>
+            Phone: <a href="tel:+263712793798">+263 712 793 798</a>
+          </p>
+          <p>
             Email:{" "}
             <a href="mailto:zamsamrefrigeration@gmail.com">
               zamsamrefrigeration@gmail.com
