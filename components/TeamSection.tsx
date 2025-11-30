@@ -59,7 +59,7 @@ export default function TeamSection() {
               "/images/about/lisa.png",
               "/images/about/mike.png",
             ]}
-            backgroundImage="/refrigeration-hero.jpeg"
+            backgroundImage="/images/about/zamsamtruck.jpg"
           />
         </div>
 
