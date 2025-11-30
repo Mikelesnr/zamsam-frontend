@@ -5,7 +5,7 @@ import TeamCircleLayout from "./TeamCircleLayout";
 const teamMembers = [
   {
     name: "Michael Mwanza Snr",
-    role: "Director",
+    role: "Managing Director",
     image: "/images/about/michael.png",
   },
   {
@@ -52,15 +52,15 @@ export default function TeamSection() {
         {/* Main team image only on tablet and up */}
         <div className="hidden md:block mt-10 mb-6">
           <TeamCircleLayout
-  centerImage="/images/about/michael.png"
-  edgeImages={[
-    "/images/about/monica.png",
-    "/images/about/thomas.png",
-    "/images/about/lisa.png",
-    "/images/about/mike.png",
-  ]}
-  backgroundImage="/refrigeration-hero.jpeg"
-/>
+            centerImage="/images/about/michael.png"
+            edgeImages={[
+              "/images/about/monica.png",
+              "/images/about/thomas.png",
+              "/images/about/lisa.png",
+              "/images/about/mike.png",
+            ]}
+            backgroundImage="/refrigeration-hero.jpeg"
+          />
         </div>
 
         <TeamCarousel members={teamMembers} />
