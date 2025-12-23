@@ -12,7 +12,6 @@ import CylinderGallery from "@/components/CylinderGallery";
 const Home: React.FC = () => {
   const galleryImages = [
     "/images/home/zamsam1.jpg",
-    "/images/home/zamsam2.jpg",
     "/images/home/zamsam3.jpg",
     "/images/home/zamsam4.jpg",
     "/images/home/zamsam5.jpg",
@@ -25,7 +24,7 @@ const Home: React.FC = () => {
     "/images/home/zamsam12.jpg",
     "/images/home/zamsam13.jpg",
     "/images/home/zamsam14.jpg",
-    // "/images/home/zamsam15.jpg",
+    "/images/home/zamsam15.jpg",
     // "/images/home/zamsam16.jpg",
     // "/images/home/zamsam17.jpg",
     // "/images/home/zamsam18.jpg",
