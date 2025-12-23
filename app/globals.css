@@ -43,16 +43,16 @@
 /* Base Body Styles */
 html {
   /* Set the background image */
-  background-image: url("/background.png");
+  background-image: url("/refrigeration-equipments.png");
 
   /* Ensure the image covers the entire viewport */
-  background-size: cover;
+  /* background-size:; */
 
   /* Fix the image position so it doesn't scroll with content */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 
   /* Center the image */
-  background-position: center;
+  /* background-position; */
 
   /* Ensure html is full height */
   min-height: 100%;

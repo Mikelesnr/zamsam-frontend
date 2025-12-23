@@ -36,7 +36,7 @@ export default function TeamSection() {
       id="team"
       className="py-20 px-6 relative z-10 rounded-xl"
       style={{
-        backgroundColor: "rgba(28, 35, 41, 0.7)", // semi-transparent blue
+        backgroundColor: "rgba(28, 35, 41, 0.9)", // semi-transparent blue
         backdropFilter: "blur(6px)", // optional: frosted glass effect
       }}
     >
