@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: rgba(28, 35, 41, 0.7);
+  background-color: rgba(28, 35, 41, 0.9);
   color: #ffffff;
   padding: 4rem 5%;
 }
@@ -38,7 +38,7 @@
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s, transform 0.2s;
 }
 

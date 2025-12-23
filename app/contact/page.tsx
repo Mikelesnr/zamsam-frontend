@@ -60,7 +60,7 @@ export default function ContactPage() {
   return (
     <div
       style={{
-        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        backgroundColor: "rgba(0, 0, 0, 0.8)",
         color: "#ffffff",
         minHeight: "100vh",
         paddingBottom: "4rem",

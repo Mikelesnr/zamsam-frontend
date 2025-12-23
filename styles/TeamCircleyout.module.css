@@ -14,12 +14,13 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.2; /* image transparency */
+  opacity: 0.1; /* image transparency */
   z-index: 0;
 }
 
 /* Foreground bubbles */
-.edge, .center {
+.edge,
+.center {
   position: absolute;
   width: 120px;
   height: 120px;

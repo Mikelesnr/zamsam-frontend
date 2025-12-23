@@ -4,7 +4,7 @@
   text-align: center;
   height: fit-content;
   align-content: center;
-  background-color: rgba(28, 35, 41, 0.7);
+  background-color: rgba(28, 35, 41, 0.9);
   backdrop-filter: blur(4px); /* Optional: subtle blur */
   position: relative;
   padding-bottom: 2rem !important;
@@ -37,7 +37,7 @@
   transition: transform 0.2s, background-color 0.3s;
 }
 
-.ctaText{
+.ctaText {
   display: flex;
   align-items: center;
   gap: 10px;
