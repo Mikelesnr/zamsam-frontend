@@ -15,13 +15,28 @@
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #003366; /* Primary Blue */
+  color: #003366;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0%;
+  gap: 10px;
 }
 
 .logoAccent {
   font-size: 1.2rem;
   font-weight: 500;
   color: #333333;
+}
+
+.logoText {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #003366;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .nav {

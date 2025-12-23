@@ -11,6 +11,7 @@ import {
 } from "@tabler/icons-react";
 import { usePathname } from "next/navigation";
 import classes from "@/styles/Header.module.css";
+import Image from "next/image";
 
 const MOBILE_BREAKPOINT = 840;
 
@@ -44,10 +45,17 @@ const Header: React.FC = () => {
     <AppShell.Header>
       <div className={classes.header}>
         {/* Logo */}
-        <Title order={3} className={classes.logo}>
-          Zamsam{" "}
-          <Text span inherit className={classes.logoAccent}>
-            Engineering
+        <Title order={3} className={`${classes.logo}`}>
+          <Image
+            src="/images/apple-touch-icon.png"
+            alt="Zamsam Engineering Logo"
+            width={60} // set explicit width
+            height={60} // set explicit height
+            className={classes.logoImage}
+          />
+          <Text span className={classes.logoContainer}>
+            <span className={classes.logoText}>Zamsam</span>
+            <span className={classes.logoAccent}>Engineering</span>
           </Text>
         </Title>
 
@@ -75,9 +83,9 @@ const Header: React.FC = () => {
             variant="filled"
             radius="md"
           >
-             <span className={classes.navText}>
-          <IconPhoneCall size={24} /> CALL NOW
-          </span>
+            <span className={classes.navText}>
+              <IconPhoneCall size={24} /> CALL NOW
+            </span>
           </Button>
         </Group>
 
@@ -118,9 +126,9 @@ const Header: React.FC = () => {
             fullWidth
             mt="md"
           >
-           <span className={classes.navText}>
-          <IconPhoneCall size={20} /> CALL NOW
-          </span>
+            <span className={classes.navText}>
+              <IconPhoneCall size={20} /> CALL NOW
+            </span>
           </Button>
         </div>
       )}

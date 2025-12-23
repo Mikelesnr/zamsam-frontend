@@ -51,8 +51,14 @@ const Services: React.FC = () => {
       <Container size="lg">
         <SectionTitle
           title="Our Services"
-          subtitle="We handle everything from new **installations** to reliable emergency
-          **repairs**"
+          subtitle={
+            <>
+              We handle everything from new <strong>installations</strong> to
+              reliable emergency
+              <strong> repairs</strong> and regular <strong> servicing</strong>{" "}
+              of refrigeration and air conditioning systems.
+            </>
+          }
           align="center"
           titleColor="#ffffff"
           subtitleColor="#ffffff"

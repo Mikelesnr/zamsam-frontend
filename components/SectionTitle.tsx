@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 type Props = {
   title: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   align?: "left" | "center" | "right";
   titleColor?: string;
   subtitleColor?: string;
